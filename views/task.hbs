@@ -44,7 +44,7 @@
   var EditorClient = ot.EditorClient;
   var SocketIOAdapter = ot.SocketIOAdapter;
   var CodeMirrorAdapter = ot.CodeMirrorAdapter;
-  var socket = io.connect('http://localhost:3000');
+  var socket = io.connect('');
   var editor = CodeMirror.fromTextArea(document.getElementById("code-screen"), {
     lineNumbers: true,
     theme: "monokai"
@@ -56,7 +56,7 @@
     if (!code) {
       editor.setValue(str);
     }
-    
+
     cmClient = window.cmClient = new EditorClient(
       revision, clients, serverAdapter, new CodeMirrorAdapter(editor)
     );

@@ -8,6 +8,6 @@ module.exports = {
       pass: 'bitcamppassword123'
     }
   },
-  dbConnstring: 'mongodb://127.0.0.1:27017/platform',
+  dbConnstring: 'mongodb://admin:BitcampIsAwesome2018@ds239137.mlab.com:39137/bitcampplatform',
   sessionKey: 'HelloBitcamp'
 }
