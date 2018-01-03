@@ -5,8 +5,8 @@ var ot = require('ot');
 var roomList = {};
 
 module.exports = function(server) {
-  var str = 'This is a Markdown heading \n \n' +
-            'var i = i + 1;';
+  var str = '';
+
   var io = socketIO(server);
   io.on('connection', function(socket) {
     socket.on('joinRoom', function(data) {
@@ -17,7 +17,7 @@ module.exports = function(server) {
             if (err) return cb(false);
             cb(true);
           });
-          
+
         });
         roomList[data.room] = socketIOServer;
       }
