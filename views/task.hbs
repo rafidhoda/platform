@@ -1,29 +1,36 @@
 <div>
   <div class="row">
-    <div class="col-md-8">
-      <textarea id="code-screen">{{content}}</textarea>
+    <div class="col-md-5">
+      <div class="row">
+        <div class='embed-container'><iframe src='https://www.youtube.com/embed/vNjobQiQZns' frameborder='0' allowfullscreen></iframe></div>
+      </div>
     </div>
-    <div class="col-md-4" id="chatbox">
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          CHAT ROOM
-          <span class="pull-right" id="chatbox-username">
-            {{#if user}}
-              {{user.name}}
-            {{/if}}
-          </span>
-        </div>
-        <div class="panel-body">
-          <ul class="media-list" style="height: 300px; overflow-y: scroll" id="chatbox-listMessages">
-
-          </ul>
-        </div>
-        <div class="panel-footer">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Enter message" id="userMessage">
-            <span class="input-group-btn">
-              <button type="button" class="btn btn-primary" onclick="sendMessage()">SEND</button>
+    <div class="col-md-7">
+      <div class="row">
+        <textarea id="code-screen">{{content}}</textarea>
+      </div>
+      <div class="row" id="chatbox">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            CHAT ROOM
+            <span class="pull-right" id="chatbox-username">
+              {{#if user}}
+                {{user.name}}
+              {{/if}}
             </span>
+          </div>
+          <div class="panel-body">
+            <ul class="media-list" style="height: 300px; overflow-y: scroll" id="chatbox-listMessages">
+
+            </ul>
+          </div>
+          <div class="panel-footer">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Enter message" id="userMessage">
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-primary" onclick="sendMessage()">SEND</button>
+              </span>
+            </div>
           </div>
         </div>
       </div>
